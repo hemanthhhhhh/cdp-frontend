@@ -21,7 +21,7 @@ function App() {
     setError(null);
     try {
       // const result = await axios.post('http://localhost:5000/chat', { question });
-      const result = await axios.post('http://localhost:5000/chat', { question });
+      const result = await axios.post('https://cdp-chatbot-u8i7.onrender.com/chat', { question });
       const newEntry = { question, answer: result.data.answer };
       setChatHistory(prevHistory => [...prevHistory, newEntry]);
       setTypingEffect('');
